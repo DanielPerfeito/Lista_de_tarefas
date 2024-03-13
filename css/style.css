@@ -9,7 +9,7 @@
 }
 
 #container {
-  height: 100%;
+  height: 100vh;
 }
 #container header {
   display: flex;
@@ -156,7 +156,7 @@
 }
 
 .tema-claro {
-  background-image: url(/assets/back-dia.png);
+  background-image: url(./assets/back-dia.png);
   color: #000000;
   background-position: center;
   background-repeat: no-repeat;
@@ -170,7 +170,7 @@
 }
 
 .tema-escuro {
-  background-image: url(/assets/back-noite.png);
+  background-image: url(./assets/back-noite.png);
   color: #f0ffff;
   background-position: center;
   background-repeat: no-repeat;
