@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações iniciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas com JQuery</title>
+
+    <!-- Importando jQuery e scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fonte utilizada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Container principal -->
+    <div id="container" class="tema-claro">
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Lista de Tarefas</h1>
+            <!-- Área de tema claro/escuro -->
+            <div id="area-tema">
+                <img id="icon-sol" src="assets/icon-sol-1.png" alt="">
+                <div id="btn-tema">
+                    <div id="status-tema"></div>
+                </div>
+                <img id="icon-lua" src="assets/icon-lua-1.png" alt="">
+            </div>
+        </header>
+
+        <!-- Corpo principal -->
+        <main>
+            <!-- Área para adicionar novas tarefas -->
+            <div class="area-tarefa">
+                <label for="nova-tarefa">Nova Tarefa</label>
+                <input type="text" id="nova-tarefa" placeholder="Ex.. Regar plantas">
+                <button type="button" id="btn-add">Adicionar</button>
+            </div>
+            
+            <!-- Lista de tarefas existentes -->
+            <div class="suas-tarefas">
+                <h2>Suas Tarefas</h2>
+                <h3>Total: <span>0</span></h3>
+                
+                <ol id="lista-tarefas">
+                    <!-- Itens da lista serão adicionados aqui -->
+                </ol>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

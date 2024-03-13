@@ -1,0 +1,214 @@
+@import "default.scss";
+
+
+* {
+    margin: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $fonte-padrao;
+}
+
+#container {
+
+    height: 100%;
+
+    header {
+        @include display(flex, row, space-between, center, 0);
+        background-color: $cor-destaque;
+        padding: 15px 30px;
+        width: 100%;
+
+        #area-tema {
+            @include display(flex, row, center, center, 5px);
+
+            img{
+                width: 35px;
+                padding-right: 3px ;
+            }
+            #btn-tema {
+                height: 30px;
+                width: 60px;
+                border-radius: 15px;
+                padding: 3px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                #status-tema {
+                    background-color: $cor-destaque;
+                    height: 100%;
+                    width: 45%;
+                    border-radius: 15px;
+                }
+            }
+        }
+
+    }
+
+
+
+
+    main {
+        @include display(flex, column, center, center, 0);
+        width: 100%;
+
+
+
+        .area-tarefa {
+            @include display(flex, row, center, center, 5px);
+            padding: 50px;
+            width: 100%;
+            
+
+            label {
+                font-size: 1.6rem;
+            }
+
+            input {
+                width: 50%;
+                padding: 9px;
+                border-radius: 30px 0 0 30px;
+                border: solid 1px $cor-destaque;
+                outline: none;
+                background-color: #ffffff00;
+                font-size: 1rem;
+
+                &::placeholder{
+                    color: $cor-destaque;
+                }
+
+                &:focus{
+                    border: solid 2px $cor-destaque;
+                }
+            }
+
+            #btn-add {
+                padding: 10px;
+                border-radius: 0 30px 30px 0;
+                background-color: $cor-destaque;
+                border: solid 2px $cor-destaque;
+                transition: .2s;
+
+                &:hover{
+                    background-color: $cor-destaque2;
+                    border: solid 2px $cor-destaque2;
+                    color: $cor-clara2;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .suas-tarefas {
+            @include display(flex, column, center, center, 5px);
+            width: 50%;
+            padding: 30px;
+            border: solid 1px $cor-destaque;
+            border-radius: 30px;
+           
+
+
+            #lista-tarefas {
+                @include display(flex, column, center, center, 10px);
+                width: 100%;
+                padding: 30px;
+                max-height: 550px;
+                overflow-y: auto;
+                
+                &::-webkit-scrollbar{
+                    width: 5px
+                }
+
+                &::-webkit-scrollbar-thumb{
+                    background-color: $cor-destaque;
+                    border-radius: 5px
+                }
+
+                .item-lista {
+                    @include display(flex, row, center, center, 0);
+                    width: 100%;
+                    border-bottom: solid 1px $cor-destaque;
+
+
+                    p {
+                        width: 65%;
+                        overflow: hidden;
+                        padding: 10px;
+                        font-size: 1.2rem;
+
+                    }
+
+                    button {
+                        height: 100;
+                        width: 35%;
+                        padding: 5px;
+                        border-radius: 15px;
+                        background-color: $cor-destaque;
+                        border: none;
+                        transition: .2s;
+
+                        &:hover{
+                            background-color: $cor-destaque2;
+                            border: solid 2px $cor-destaque2;
+                            color: $cor-clara2;
+                            cursor: pointer;
+                        }
+
+
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+//Estilização para troca de temas
+.tema-claro {
+    background-image: url(/assets/back-dia.png);
+    color: $cor-escura1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .suas-tarefas{
+        background-color: #ffffffaf;
+    }
+
+    #btn-tema{
+        background-color: $cor-clara2
+    }
+}
+
+.tema-escuro {
+    background-image: url(/assets/back-noite.png);
+    color: $cor-clara2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+ 
+
+        input{
+            color: $cor-destaque;
+        }
+
+    #btn-tema{
+        background-color: $cor-escura2;
+
+        #status-tema{
+            position: relative;
+            left: 52%
+        }
+    }
+
+
+    h1, h2, h3, label{
+        text-shadow: 2px 2px 1px $cor-destaque2;
+    }
+
+    .suas-tarefas{
+        background-color: #00000093;
+    }
+}
+

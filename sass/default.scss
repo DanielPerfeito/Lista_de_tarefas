@@ -1,0 +1,20 @@
+/*Variáveis*/
+$cor-clara1: #ffffff;
+$cor-clara2: #f0ffff;
+$cor-escura1: #000000;
+$cor-escura2: #2b2b2b;
+$cor-destaque: #3fe994;
+$cor-destaque2: #218352;
+$cor-destaque-transp: #3fe99444;
+
+$fonte-padrao: "Madimi One", sans-serif;
+
+/*Mixins*/
+@mixin display ($display, $direction, $j-content, $a-items, $gap){
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $j-content;
+    align-items: $a-items;
+    gap: $gap;
+}
+
